@@ -5,7 +5,7 @@
 #define fast ios::sync_with_stdio(0), cin.tie(nullptr), cout.tie(nullptr)
 #define endl "\n"
 using namespace std;
-
+//1541backjun 
 int main() {
 	fast;
 	string Su;
@@ -42,18 +42,18 @@ int main() {
 	int sum = 0, minimum=100000,mem2;
 	for (int i = 0; i < Array.size(); i++) {
 		if (Array[i].second == '-') {
-			int sum1 = 0;//°ıÈ£¸¦ ¾ÈÇßÀ» ¶§ÀÇ °ª
-			int minus = -Array[i].first;//Ã¹¹øÂ° °ªÀº µû·Î »­ 
+			int sum1 = 0;//ê´„í˜¸ë¥¼ ì•ˆí–ˆì„ ë•Œì˜ ê°’
+			int minus = -Array[i].first;//ì²«ë²ˆì§¸ ê°’ì€ ë”°ë¡œ ëºŒ 
 			if (i + 1 != Array.size()) {
-				for (int j = i + 1; j < Array.size(); j++) {//°ıÈ£¸¦ ÇßÀ» ¶§ÀÇ °ª
-					int sum2 = minus;//µÎ¹øÂ° °ªºÎÅÍ ÇÏ³ª¾¿ ´Ã·Á°¡¸é¼­ °ıÈ£¸¦ ¾îµğ¿¡ µÑÁö ºñ±³
+				for (int j = i + 1; j < Array.size(); j++) {//ê´„í˜¸ë¥¼ í–ˆì„ ë•Œì˜ ê°’
+					int sum2 = minus;//ë‘ë²ˆì§¸ ê°’ë¶€í„° í•˜ë‚˜ì”© ëŠ˜ë ¤ê°€ë©´ì„œ ê´„í˜¸ë¥¼ ì–´ë””ì— ë‘˜ì§€ ë¹„êµ
 					for (int z = i + 1; z <= j; z++) {
 						if (Array[z].second == '-') sum2 += Array[z].first;
 						else sum2 += -Array[z].first;
 					}
 					if (minimum > sum2) {
 						minimum = sum2;
-						mem2 = j;//ÃÖ¼Ò°ªÀÏ ¶§ÀÇ index°ª ÀúÀå.
+						mem2 = j;//ìµœì†Œê°’ì¼ ë•Œì˜ indexê°’ ì €ì¥.
 					}
 				}
 				for (int j = i + 1; j < mem2; j++) {
